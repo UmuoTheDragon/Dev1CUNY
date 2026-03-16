@@ -3,7 +3,7 @@ using UnityEngine;
 public class RedHazardScript : MonoBehaviour
 {
     public Rigidbody2D RB;
-    public float Speed = 2.5f;
+    public float Speed = 0.5f;
     public GameObject MirrPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
