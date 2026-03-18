@@ -19,9 +19,12 @@ public class RedHazardScript : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, MirrPlayer.transform.position, Time.deltaTime * 3);
 
         //Following Player.2
-        Vector2 vel = new Vector2(0, 0);
-        vel = (Vector2)(MirrPlayer.transform.position - transform.position);
-        vel = vel.normalized * 3;
-        RB.linearVelocity = vel;
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Vector2 vel = new Vector2(0, 0);
+            vel = (Vector2)(MirrPlayer.transform.position - transform.position);
+            vel = vel.normalized * 3;
+            RB.linearVelocity = vel;
+        }
     }
 }
