@@ -2341,6 +2341,7 @@ MonoBehaviour:
   RB: {fileID: 9098013733899075260}
   Speed: 0.5
   MirrPlayer: {fileID: 1147899441}
+  shouldFollow: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

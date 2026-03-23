@@ -5,10 +5,11 @@ public class RedHazardScript : MonoBehaviour
     public Rigidbody2D RB;
     public float Speed = 0.5f;
     public GameObject MirrPlayer;
+    public bool shouldFollow = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Invoke("StartFollowing", 0.5f);
     }
 
     // Update is called once per frame
@@ -19,7 +20,7 @@ public class RedHazardScript : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, MirrPlayer.transform.position, Time.deltaTime * 3);
 
         //Following Player.2
-        if (Input.GetKey(KeyCode.Space))
+        if (shouldFollow)
         {
             Vector2 vel = new Vector2(0, 0);
             vel = (Vector2)(MirrPlayer.transform.position - transform.position);
